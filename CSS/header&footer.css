@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: "Montserrat", sans-serif;
+}
+
+::selection{
+  color: #ffffff;
+  background-color: #252525;
+}
+/*----------------------------------navbar css starts here----------------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #24252a;
+  }
+  
+  .logo {
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+  }
+
+  .logo:hover {
+    animation: jiggle 0.5s infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  @keyframes jiggle {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(5deg);
+    }
+    75% {
+      transform: rotate(-5deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #0088a9;
+  }
+  
+  .cta {
+    padding: 9px 25px;
+    background-color: rgba(0, 136, 169, 1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: rgba(0, 136, 169, 0.8);
+  }
+  /*----------------------------------footer css starts here----------------------------------*/
+footer{
+    background-color: #24252a;
+  
+  }
+  
+  .footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px;
+  }
+  
+  .socialIcons{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .socialIcons a{
+    text-decoration: none;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+  }
+  
+  .socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0.9;
+  }
+  
+  /*Hover effects on social icons*/
+  .socialIcons a:hover{
+    background-color: #24252a;
+    transition: 0.5s;
+  }
+  
+  .socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+  }
+  
+  .footerNav{
+    margin: 30px 0;
+  }
+  
+  .footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+  
+  .footerNav ul li a{
+    color: white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+  }
+  
+  .footerNav ul li a:hover{
+    opacity: 1;
+  }
+  
+  .footerBottom{
+    background-color: #1b1d20;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footerBottom p{
+    color: white;
+  }
+  
+  .designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+  }

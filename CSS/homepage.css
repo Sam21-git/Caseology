@@ -1,0 +1,433 @@
+/*----------------------------------slider css starts here----------------------------------*/
+.slider{
+  width: 100%;
+  max-width: 1280px;
+  height: 500px;
+  border-radius: 5px;
+  margin: 60px auto 150px auto;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 3s;
+}
+
+.slide img{
+  width: auto;
+  height: auto;
+}
+
+.slide video{
+  width: auto;
+  height: auto;
+}
+
+/*css for manual slide navigation*/
+
+.navigation-manual{
+  position: absolute;
+  width: 85%;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #0088a9;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: rgb(54, 179, 186);
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #0088a9;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #0088a9;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #0088a9;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #0088a9;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #0088a9;
+}
+
+/*----------------------------------feature css starts here----------------------------------*/
+.featureContainer{
+  margin: 20px 100px 150px 100px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.section__title{
+  margin: 18px;
+}
+
+.title{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product{
+  width: 100%;
+}
+
+.product__wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.product__item{
+  display: block;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  align-self: auto;
+  order: 0;
+  margin: 10px;
+}
+
+.product__image{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__image img{
+  width: 279px;
+  height: auto;
+  object-fit: contain;
+}
+
+.product__desc{
+  font-size: 18px;
+  margin: 12px 0px;
+  text-align: center
+}
+
+.product__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 12px;
+}
+
+
+/*button learn more css here*/
+button {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+ }
+ 
+ button.learn-more {
+  width: 12rem;
+  height: auto;
+ }
+ 
+ button.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+ }
+ 
+ button.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+ }
+ 
+ button.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+ }
+ 
+ button.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+ }
+ 
+ button.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+ }
+ 
+ button:hover .circle {
+  width: 100%;
+ }
+ 
+ button:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+ }
+ 
+ button:hover .button-text {
+  color: #fff;
+ }
+ 
+ /*----------------------------------ads banner css starts here----------------------------------*/
+ .text{
+  padding:40px;
+  background:#eee;
+}
+
+.text h3{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  padding:10px;
+}
+
+.banner-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto 150px auto;
+  width: 90%;
+}
+
+.banner-container .banner{
+  background:linear-gradient(-55deg, #ff7675 29%, #d63031 29.1%, #d63031 68%, #ff7675 68.1%);
+  border-radius: 5px;
+  margin:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  box-shadow: 0 5px 10px #0005;
+  overflow: hidden;
+}
+
+.banner-container .banner .case{
+  flex:1 1 250px;
+  padding:15px;
+  text-align: center;
+}
+
+.banner-container .banner .case img{
+  width:80%;
+}
+
+.banner-container .banner .content{
+  flex:1 1 250px;
+  text-align: center;
+  padding:10px;
+  text-transform: uppercase;
+}
+
+.banner-container .banner .content span{
+  color:#eee;
+  font-size: 25px;
+}
+
+.banner-container .banner .content h3{
+  color:#fff;
+  font-size: 40px;
+}
+
+.banner-container .banner .content p{
+  color:#eee;
+  font-size: 20px;
+  padding:10px 0;
+}
+
+.banner-container .banner .content .btn{
+  display: block;
+  height:40px;
+  width:150px;
+  line-height: 40px;
+  background: #fff;
+  color:#d63031;
+  margin:5px auto;
+  text-decoration: none;
+}
+
+.banner-container .banner .women{
+  position: relative;
+  bottom: -33px;
+  padding:10px;
+  flex:1 1 250px;
+}
+
+.banner-container .banner .women img{
+  width:100%;
+}
+
+ /*----------------------------------badges css starts here----------------------------------*/
+ hr{
+  width: 80%;
+  margin: auto;
+  opacity: 0.3;
+ }
+
+ .vl{
+  border-left: 1px solid ;
+  opacity: 0.2;
+ }
+
+ .badges__container{
+  margin: 50px auto 70px auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+ }
+
+ .payment__badge, .satisfaction__badge{
+  flex: 1;
+ }
+
+ .head__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 30px;
+ }
+
+ .head__container img{
+  margin: 0 10px 0 0;
+  vertical-align: middle;
+ }
+
+ .head__container span{
+  font-weight: bold;
+  font-size: 23px;
+ }
+
+ .content__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  margin-top: 20px;
+  text-align: center;
+ }
+
+ .item__container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 350px;
+  padding: 5px 0;
+ }
+
+ .item__container img{
+  width: 47px;
+  border: 1.1px solid #f0f0f0;
+  border-radius: 4px;
+  margin: 5px 10px;
+ }
+
+ .content__container span{
+  font-style: normal;
+  font-size: 15px;
+  line-height: 160%;
+  color: #666666;
+ }
+ 
+ .content__container span a{
+  text-decoration: none;
+  color: #666666;
+ }
+
+ 
