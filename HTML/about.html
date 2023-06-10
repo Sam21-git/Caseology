@@ -32,13 +32,44 @@
             <a class="cta" href="contact.html">Contact</a>
         </header>
 
+        <!-- svg for hover effect -->
+        <svg style="display: none;">
+            <defs>
+              <filter id="noise">
+                <feTurbulence
+                  baseFrequency="0.7,0.8"
+                  seed="0"
+                  type="fractalNoise"
+                  result="static"
+                >
+                  <animate
+                    attributeName="seed"
+                    values="0;100"
+                    dur="800ms"
+                    repeatCount="1" 
+                    begin="card.mouseenter"                           
+                  />
+                </feTurbulence>
+                <feDisplacementMap in="SourceGraphic" in2="static">
+                  <animate
+                    attributeName="scale"
+                    values="0;40;0"
+                    dur="800ms"
+                    repeatCount="1" 
+                    begin="founder__image.mouseenter"                           
+                  />
+                </feDisplacementMap>
+              </filter>  
+            </defs>
+          </svg>
+          
         <div class="heading" data-aos="zoom-in">
             <h1>About Us</h1>
             <p class="glitchtxt" data-value="Welcome to Caseology - Where Style Meets Durability!" id="glitchtxt">Welcome to Caseology - Where Style Meets Durability!</p>
         </div>
         <div class="container">
             <section class="about">
-                <div class="about__image" data-aos="fade-right">
+                <div class="about__image" id="about__image" data-aos="fade-right">
                     <img src="../IMAGES/about us 1.jpg" alt="about us image">
                 </div>
                 <div class="about__content" data-aos="fade-left">

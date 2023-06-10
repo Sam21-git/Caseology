@@ -3,6 +3,16 @@ body{
     background-color: #f2f2f2;
 }
 
+@keyframes pulse {
+  from, to {
+    scale: 1;
+  }
+  
+  50% {
+    scale: 1.08;
+  }
+}
+
 .heading{
     width: 90%;
     display: flex;
@@ -54,17 +64,24 @@ body{
     flex: 1;
     margin-right: 10%;
     overflow: hidden;
+    width: 580px;
+    border-radius: 1rem;
+    aspect-ratio: 2/3;
 }
 
 .about__image img{
-    max-width: 90%;
-    height: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
     display: block;
     transition: 0.5s ease;
+
 }
 
 .about__image:hover img{
-    transform: scale(1.2);
+    animation: pulse 800ms ease-in-out;
+    filter: url(#noise);
 }
 
 .about__content{
@@ -100,11 +117,16 @@ body{
     flex: 1;
     margin-left: 10%;
     overflow: hidden;
+    width: 580px;
+    border-radius: 1rem;
+    aspect-ratio: 2/3;
 }
 
 .about__image__alt img{
-    max-width: 90%;
-    height: auto;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: inherit;
     display: block;
     transition: 0.5s ease;
 }

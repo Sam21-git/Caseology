@@ -6,7 +6,7 @@
 }
 
 .product__container{
-    margin-top: 20px;
+    margin-top: 50px;
     margin-bottom: 20px;
     display: grid;
     place-items: center;
@@ -35,13 +35,14 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    margin-top: 15px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .product{
     position: relative;
     background-color: var(--sectionBack);
-    width: 400px;
+    width: calc(33.33% - 40px);
     height: 100%;
     box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
     display: flex;
